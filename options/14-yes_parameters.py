@@ -1,4 +1,9 @@
-import click
+# pylint: disable=C0103
+"""
+Click yes parameters
+"""
+import click  # pylint: disable=E0401
+
 
 #  def abort_if_false(ctx, param, value):
 #      if not value:
@@ -9,8 +14,10 @@ import click
 #                expose_value=False,
 #                prompt='Are you sure you want to drop the database?')
 @click.confirmation_option(prompt='Are you sure you want to drop the database?')
-def dropdb():
+def drop_db():
+    """Starts CLI application"""
     click.echo('Dropped all tables')
 
+
 if __name__ == '__main__':
-    dropdb()
+    drop_db()  # pylint: disable=E1120

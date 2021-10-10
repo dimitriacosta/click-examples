@@ -1,4 +1,9 @@
-import click
+# pylint: disable=C0103
+"""
+Click values from environment variables
+"""
+import click  # pylint: disable=E0401
+
 
 #  @click.command()
 #  @click.option('--username')
@@ -21,7 +26,9 @@ import click
 @click.command()
 @click.option('--username', envvar='USERNAME')
 def greet(username):
+    """Starts CLI application"""
     click.echo(f"Hello {username}!")
 
+
 if __name__ == '__main__':
-    greet()
+    greet()  # pylint: disable=E1120
