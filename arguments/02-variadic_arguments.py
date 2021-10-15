@@ -1,4 +1,9 @@
-import click
+# pylint: disable=C0103
+"""
+Click variadic arguments
+"""
+import click  # pylint: disable=E0401
+
 
 @click.command()
 @click.argument('src', nargs=-1)
@@ -8,5 +13,6 @@ def copy(src, dst):
     for fn in src:
         click.echo('Move %s to folder %s' % (fn, dst))
 
+
 if __name__ == '__main__':
-    copy()
+    copy()  # pylint: disable=E1120

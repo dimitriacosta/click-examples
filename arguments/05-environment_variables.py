@@ -1,4 +1,9 @@
-import click
+# pylint: disable=C0103
+"""
+Click environment variables
+"""
+import click  # pylint: disable=E0401
+
 
 @click.command()
 @click.argument('src', envvar='SRC', type=click.File('r'))
@@ -8,4 +13,4 @@ def echo(src):
 
 
 if __name__ == '__main__':
-    echo()
+    echo()  # pylint: disable=E1120
